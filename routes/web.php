@@ -19,17 +19,18 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', function () {
-    return 'Olá, seja bem vindo!';
-});
+Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal']); //LocalDoController ::class, 'ActionQueSeráUsada'
+Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobreNos']); //LocalDoController ::class, 'ActionQueSeráUsada'
+Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato']); //LocalDoController ::class, 'ActionQueSeráUsada'
 
-Route::get('/sobre-nos', function () {
-    return 'sobre-nos';
-});
-
-Route::get('/contato', function () {
-    return 'contato';
-});
+// Indicando um parâmetro, usando chaves no diretório
+Route::get(
+    '/contato/{nome}/{categoria_id}', 
+    function(string $nome, int $categoria_id = 1) {
+    echo "Esses são os parâmetros: $nome - $categoria_id";
+})->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+'); 
+// Se o valor do id nao for numero de 0 a 9, vai dar um erro do laravel
+// O nome deve ser apenas em letras e pelo menos um digito
 
 /*
 VERBOS HTTP
