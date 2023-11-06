@@ -29,12 +29,11 @@ Route::get('/login', function() { return 'login'; })->name('site.login');
 // /app
 Route::prefix('/app')->group(function() {
     Route::get('/clientes', function() { return 'clientes'; })->name('app.clientes');
-    Route::get('/fornecedores', function() { return 'fornecedores'; })->name('app.fornecedores');
+    Route::get('/fornecedor', [\App\Http\Controllers\FornecedorController::class, 'index'])->name('app.fornecedor');
     Route::get('/produtos', function() { return 'produtos'; })->name('app.produtos');
 
 });
 
-Route::get('/teste/{param1}/{param2}', [\App\Http\Controllers\TesteController::class, 'teste'])->name('teste');
 
 
 //Adicionando redirecionamento entre rotas
