@@ -10,5 +10,6 @@
     <body>
         @include('site.layouts._partials.navbar')
         @yield('content')
+        @include('site.layouts._partials.footer')
     </body>
   </html>
