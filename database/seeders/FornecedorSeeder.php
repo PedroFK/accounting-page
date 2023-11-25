@@ -10,8 +10,6 @@ class FornecedorSeeder extends Seeder
 {
     public function run(): void
     {
-        // two ways to populate the database
-
         $fornecedor = new Fornecedor();
         $fornecedor->nome='JF Bike';
         $fornecedor->site='bicicleta.com';
