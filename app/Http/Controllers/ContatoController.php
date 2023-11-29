@@ -27,7 +27,7 @@ class ContatoController extends Controller
 
     public function save(Request $request) {
         $request->validate([
-            'nome'           => 'required|string|unique:site_contatos,nome',
+            'nome'           => 'required|string|max:40|unique:site_contatos,nome',
             'telefone'       => 'required|string|max:12',
             'email'          => 'required|email',
             'motivo_contato' => 'required|string',
