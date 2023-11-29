@@ -20,6 +20,6 @@ class SiteContatoSeeder extends Seeder
         ]);
         */
 
-        SiteContato::Factory()->count(100)->create();
+        SiteContato::Factory()->count(10)->create();
     }
 }
