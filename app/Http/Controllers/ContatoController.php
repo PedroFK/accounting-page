@@ -8,6 +8,14 @@ use App\Models\SiteContato;
 class ContatoController extends Controller
 {
     public function contato(Request $request) {
+        $motivo_contatos = [ 
+            '1' => 'Dúvida',
+            '2' => 'Elogio',
+            '3' => 'Reclamação'
+        ];
+        
+        return view('site.contato', ['titulo' => 'contato (teste)', 'motivo_contatos' => $motivo_contatos]);
+
         /*
         $request->all();
         Posso selecionar apenas um input
@@ -22,7 +30,6 @@ class ContatoController extends Controller
 
 
 
-        return view('site.contato');
     }
 
     public function save(Request $request) {
