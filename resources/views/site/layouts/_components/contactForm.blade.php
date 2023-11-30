@@ -19,6 +19,6 @@
     <button type="submit" class="{{$class}}">ENVIAR</button>
 
     <div style="position:absolute; top:0px; left:0px; background:rgb(163, 35, 35)">
-        {{ print_r($errors)}}
+        {{print_r($errors)}}
     </div>
 </form>
