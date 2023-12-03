@@ -19,8 +19,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call(FornecedorSeeder::class);
-        $this->call(SiteContatoSeeder::class);
+        $this->call([
+            FornecedorSeeder::class,
+            SiteContatoSeeder::class,
+            MotivoContatoSeeder::class
+        ]);
         // sail artisan db:seed  -> para salvar as seeders
     }
 }
