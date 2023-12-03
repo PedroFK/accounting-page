@@ -17,6 +17,4 @@
     </div>
 </div>
 
-{{ print_r($motivo_contatos) }}
-
 @endsection
