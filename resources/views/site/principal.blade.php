@@ -7,12 +7,12 @@
 
     <div class="esquerda">
         <div class="informacoes">
-            <h1>Sistema Super Gestão</h1>
-            <p>Software para gestão empresarial ideal para sua empresa.
+            <h1>Contabilidade Online</h1>
+            <p>Software de contabilidade ideal para sua empresa.
             <p>
             <div class="chamada">
                 <img src={{ asset('img/check.png') }}>
-                <span class="texto-branco">Gestão completa e descomplicada</span>
+                <span class="texto-branco">Contabildiade completa e descomplicada</span>
             </div>
             <div class="chamada">
                 <img src={{ asset('img/check.png') }}>
