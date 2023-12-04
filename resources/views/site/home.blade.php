@@ -1,4 +1,4 @@
-@extends('site.layouts.basico')
+@extends('site.layouts.basic')
 
 @section('titulo', 'Home')
 
@@ -30,7 +30,7 @@
             <h1>Contato</h1>
             <p>Caso tenha qualquer dúvida por favor entre em contato com nossa equipe pelo formulário abaixo.
             <p>
-                @component('site.layouts._components.contactForm', ['class'=> 'borda-branca', 'motivo_contatos' => $motivo_contatos])
+                @component('site.layouts._components.contactForm', ['class'=> 'borda-branca', 'contact_reasons' => $contact_reasons])
                 @endcomponent
         </div>
     </div>

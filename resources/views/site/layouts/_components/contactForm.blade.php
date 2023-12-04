@@ -1,20 +1,20 @@
 {{$slot}}
-<form action={{ route('site.contato') }} method="POST">
+<form action={{ route('site.contact') }} method="POST">
     @csrf
-    <input name="nome" value='{{ old('nome')}}' type="text" placeholder="Nome" class="{{$class}}">
+    <input name="name" value='{{ old('name')}}' type="text" placeholder="Nome" class="{{$class}}">
     <br>
-    <input name="telefone" value='{{ old('telefone')}}' type="text" placeholder="Telefone" class="{{$class}}">
+    <input name="phone_1" value='{{ old('phone_1')}}' type="text" placeholder="Telefone" class="{{$class}}">
     <br>
     <input name="email" value='{{ old('email')}}' type="text" placeholder="E-mail" class="{{$class}}">
     <br>
-    <select name="motivo_contato" class="{{$class}}">
+    <select name="contact_reason" class="{{$class}}">
         <option value="">Qual o motivo do contato?</option>
-        @foreach($motivo_contatos as $motivo_contato->id => $motivo_contato)
-        <option value="{{$motivo_contato->id}}" {{old('motivo_contato') == $motivo_contato->id ? 'selected' : ''}}>{{$motivo_contato->motivo_contato}}</option>
+        @foreach($contact_reasons as $contact_reason->id => $contact_reason)
+        <option value="{{$contact_reason->id}}" {{old('contact_reason') == $contact_reason->id ? 'selected' : ''}}>{{$contact_reason->contact_reason}}</option>
         @endforeach
     </select>
     <br>
-    <textarea name="mensagem" placeholder="Preencha aqui a sua mensagem" class="{{$class}}">@if (old('mensagem') != '') {{ old('mensagem')}} @endif</textarea>
+    <textarea name="message" placeholder="Preencha aqui a sua mensagem" class="{{$class}}">@if (old('message') != '') {{ old('message')}} @endif</textarea>
     <br>
     <button type="submit" class="{{$class}}">ENVIAR</button>
 
