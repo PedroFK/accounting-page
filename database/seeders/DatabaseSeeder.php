@@ -20,9 +20,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            FornecedorSeeder::class,
-            SiteContatoSeeder::class,
-            MotivoContatoSeeder::class
+            SupplierSeeder::class,
+            ContactReasonSeeder::class,
+            SiteContactSeeder::class,
         ]);
         // sail artisan db:seed  -> para salvar as seeders
     }
