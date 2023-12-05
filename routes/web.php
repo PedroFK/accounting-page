@@ -3,18 +3,18 @@
 use Illuminate\Support\Facades\Route;
 
 //LocalDoController ::class, 'ActionQueSeráUsada'
-Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'principal'])->name('site.index'); 
-Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
-Route::get('/contato', [\App\Http\Controllers\ContatoController::class, 'contato'])->name('site.contato');
-Route::post('/contato', [\App\Http\Controllers\ContatoController::class, 'save'])->name('site.contato');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.index'); 
+Route::get('/about-us', [\App\Http\Controllers\SobreNosController::class, 'sobreNos'])->name('site.sobrenos');
+Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('site.contact');
+Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'save'])->name('site.contact');
 Route::get('/login', function() { return 'login'; })->name('site.login');
 
 //Parte privada do site, apenas entrar com login
 // /app
 Route::prefix('/app')->group(function() {
-    Route::get('/clientes', function() { return 'clientes'; })->name('app.clientes');
-    Route::get('/fornecedor', [\App\Http\Controllers\FornecedorController::class, 'index'])->name('app.fornecedor');
-    Route::get('/produtos', function() { return 'produtos'; })->name('app.produtos');
+    Route::get('/clients', function() { return 'clients'; })->name('app.clients');
+    Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
+    Route::get('/products', function() { return 'products'; })->name('app.products');
 
 });
 
@@ -37,10 +37,10 @@ Route::fallback(function() {
 
 /* Indicando um parâmetro, usando chaves no diretório
 Route::get(
-    '/contato/{nome}/{categoria_id}', 
-    function(string $nome, int $categoria_id = 1) {
-    echo "Esses são os parâmetros: $nome - $categoria_id";
-})->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+'); 
+    '/contact/{name}/{categoria_id}', 
+    function(string $name, int $categoria_id = 1) {
+    echo "Esses são os parâmetros: $name - $categoria_id";
+})->where('categoria_id', '[0-9]+')->where('name', '[A-Za-z]+'); 
  Se o valor do id nao for numero de 0 a 9, vai dar um erro do laravel
  O nome deve ser apenas em letras e pelo menos um digito
 
