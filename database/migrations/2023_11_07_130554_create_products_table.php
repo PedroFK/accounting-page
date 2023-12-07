@@ -8,18 +8,18 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('fornecedores', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 50);
-            $table->string('site', 70);
-            $table->string('uf', 2);
-            $table->string('email', 50);
+            $table->foreignId('unit_id')->constrained();
+            $table->string('name', 100);
+            $table->string('description')->nullable();
+            $table->integer('weight')->nullable();
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('fornecedores');
+        Schema::dropIfExists('products');
     }
 };
