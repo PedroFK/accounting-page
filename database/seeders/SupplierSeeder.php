@@ -22,8 +22,6 @@ class SupplierSeeder extends Seeder
             'site'=>'fornecedor200.com',
             'state'=>'MG',
             'email'=>'fornecedor200@gmail.com',   
-        ])
-
-        
+        ]);
     }
 }
