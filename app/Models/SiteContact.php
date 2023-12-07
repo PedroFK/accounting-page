@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SiteContato extends Model
+class SiteContact extends Model
 {
     use HasFactory;
     
     protected $fillable = [
-        'nome',
-        'telefone',
+        'name',
+        'phone_1',
         'email',
-        'motivo_contato_id',
-        'mensagem'
+        'contact_reason_id',
+        'message'
     ];
 
-    public function motivoContatos() {
-        return $this->belongsToMany(MotivoContato::class);
+    public function contactReasons() {
+        return $this->belongsToMany(ContactReason::class);
     }
 }
