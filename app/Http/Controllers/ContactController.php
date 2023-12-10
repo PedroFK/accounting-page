@@ -37,7 +37,7 @@ class ContactController extends Controller
             'name'           => 'required|string|max:40|unique:site_contacts,name',
             'phone_1'       => 'required|string|max:12',
             'email'          => 'required|email',
-            'contact_reason' => 'required|string',
+            'contact_reason_id' => 'required|string|exists:contact_reasons,id',
             'message'       => 'required|string|max:255',
         ]);
     }
