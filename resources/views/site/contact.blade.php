@@ -3,7 +3,7 @@
 @section('titulo', 'Contato')
     
 @section('content')
-<div class="conteudo-pagina">
+<div class="page-content">
     <div class="titulo-pagina">
         <h1>Entre em contato conosco</h1>
     </div>
