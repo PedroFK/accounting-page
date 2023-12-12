@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 //LocalDoController ::class, 'ActionQueSeráUsada'
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.index'); 
 Route::get('/about-us', [\App\Http\Controllers\AboutUsController::class, 'aboutUs'])->name('site.aboutus');
-Route::get('/contact', [\App\Http\Controllers\ContactController::class, 'contact'])->name('site.contact');
-Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'save'])->name('site.contact');
+Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'contact'])->name('site.contact');
+Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'store'])->name('site.contact');
 Route::get('/login', function() { return 'login'; })->name('site.login');
 
 //Parte privada do site, apenas entrar com login
