@@ -188,3 +188,12 @@ button:hover {
 .redes-sociais img {
   margin: 0px 15px 0px 15px;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  border: 1px solid #ffffff;
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px #2a9ee2 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
