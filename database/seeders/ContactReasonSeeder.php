@@ -13,5 +13,6 @@ class ContactReasonSeeder extends Seeder
         ContactReason::create(['contact_reason' => 'Dúvida']);
         ContactReason::create(['contact_reason' => 'Elogio']);
         ContactReason::create(['contact_reason' => 'Reclamação']);
+        ContactReason::create(['contact_reason' => 'Sugestão']);
     }
 }

@@ -33,7 +33,7 @@ class SiteContactController extends Controller
     }
 
     public function store(StoreSiteContactRequest $request) {
-        $siteContact = SiteContact::create($request->all());
-        return response()->json(new SiteContactResource($siteContact));
+        SiteContact::create($request->all());
+        return redirect()->route('site.index');
     }
 }
