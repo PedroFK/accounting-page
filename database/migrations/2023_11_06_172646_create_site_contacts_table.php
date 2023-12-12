@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('name', 50);
             $table->string('phone_1', 20);
             $table->string('email', 80);
-            $table->foreignId('contact_reasons_id')->constrained();
+            $table->foreignId('contact_reason_id')->constrained();
             $table->string('message');
             $table->timestamps();
         });

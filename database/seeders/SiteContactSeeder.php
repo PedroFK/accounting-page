@@ -26,7 +26,7 @@ class SiteContactSeeder extends Seeder
         foreach ($contactReasons as $contactReason) {
             SiteContact::Factory()
             ->count(3)
-            ->state(['contact_reasons_id' => $contactReason->id])
+            ->state(['contact_reason_id' => $contactReason->id])
             ->create();
         }
     }

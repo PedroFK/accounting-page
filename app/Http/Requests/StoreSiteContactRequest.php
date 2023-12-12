@@ -19,7 +19,7 @@ class StoreSiteContactRequest extends FormRequest
           'name'           => 'required|string|max:40',
           'phone_1'       => 'required|string|max:12',
           'email'          => 'required|email',
-          'contact_reason_id' => 'required|string|exists:contact_reasons,id',
+          'contact_reason_id' => 'required|exists:contact_reasons,id',
           'message'       => 'string|max:255',
         ];
     }
