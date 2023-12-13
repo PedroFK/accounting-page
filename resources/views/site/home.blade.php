@@ -3,20 +3,20 @@
 @section('titulo', 'Home')
 
 @section('content')
-<div class="conteudo-destaque">
+<div class="highlight-content">
 
-    <div class="esquerda">
-        <div class="informacoes">
+    <div class="left">
+        <div class="informations">
             <h1>Contabilidade Online</h1>
             <p>Software de contabilidade ideal para sua empresa.
             <p>
-            <div class="chamada">
+            <div class="headline">
                 <img src={{ asset('img/check.png') }}>
-                <span class="texto-branco">Contabildiade completa e descomplicada</span>
+                <span class="white-text">Contabildiade completa e descomplicada</span>
             </div>
-            <div class="chamada">
+            <div class="headline">
                 <img src={{ asset('img/check.png') }}>
-                <span class="texto-branco">Sua empresa na nuvem</span>
+                <span class="white-text">Sua empresa na nuvem</span>
             </div>
         </div>
 
@@ -25,12 +25,12 @@
         </div>
     </div>
 
-    <div class="direita">
-        <div class="contato">
+    <div class="right">
+        <div class="contact">
             <h1>Contato</h1>
             <p>Caso tenha qualquer dúvida por favor entre em contato com nossa equipe pelo formulário abaixo.
             <p>
-                @component('site.layouts._components.contactForm', ['class'=> 'borda-branca', 'contact_reasons' => $contact_reasons])
+                @component('site.layouts._components.contactForm', ['class'=> 'white-border', 'contact_reasons' => $contact_reasons])
                 @endcomponent
         </div>
     </div>

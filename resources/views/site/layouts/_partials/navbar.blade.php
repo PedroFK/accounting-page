@@ -1,4 +1,4 @@
-<div class="topo">
+<div class="top">
 
   <div class="logo">
       <img src={{ asset('img/logo.png') }}>

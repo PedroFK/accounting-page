@@ -4,13 +4,13 @@
     
 @section('content')
 <div class="page-content">
-    <div class="titulo-pagina">
+    <div class="page-title">
         <h1>Entre em contato conosco</h1>
     </div>
 
-    <div class="informacao-pagina">
-        <div class="contato-principal">
-            @component('site.layouts._components.contactForm', ['class'=> 'borda-preta', 'contact_reasons' => $contact_reasons])
+    <div class="page-information">
+        <div class="main-contact">
+            @component('site.layouts._components.contactForm', ['class'=> 'black-border', 'contact_reasons' => $contact_reasons])
             <h3>Entraremos em contato em até 5 dias úteis!</h3>
             @endcomponent
         </div>

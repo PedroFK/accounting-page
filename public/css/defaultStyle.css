@@ -29,15 +29,15 @@ input, select, textarea, button {
   color: #333;
 }
 
-.texto-branco {
+.white-text {
   color: #ffffff;
 }
 
-.borda-branca {
+.white-border {
   border: solid 1px #fff;
 }
 
-.borda-preta {
+.black-border {
   border: solid 1px #333;
 }
 
@@ -64,7 +64,7 @@ button:hover {
   color: #333333;
 }
 
-.topo {
+.top {
   width: 100%;
   background-color: #f8f8f8;
   position: absolute;
@@ -104,35 +104,35 @@ button:hover {
   color: #268fd0;
 }
 
-.conteudo-destaque {
+.highlight-content {
   width: 100%;
   height: 100%;
   min-height: 800px; 
 }
 
-.esquerda {
+.left {
   float:left;
   background-color: #268fd0;
   width: 60%;
   height: 100%;
 }
 
-.direita {
+.right {
   float:right;
   background-color: #2a9ee2;
   width: 40%;
   height: 100%;
 }
 
-.informacoes, .contato {
+.informations, .contact {
   margin: 100px 40px 40px 40px;
 }
 
-.contato-principal {
+.main-contact {
   margin: 0px 60px 60px 40px;
 }
 
-.chamada {
+.headline {
   margin-top: 30px;
   margin-left: 20px;
 }
@@ -153,26 +153,26 @@ button:hover {
   margin-bottom: 100px;
 }
 
-.titulo-pagina {
+.page-title {
   padding: 100px 0px 60px 0px;
   background-color: #2a9ee2;
   text-align: center;
 }
 
-.informacao-pagina {
+.page-information {
   text-align: center;
   margin-top: 30px;
 }
 
-.informacao-pagina p{
+.page-information p{
   color: #333;
 }
 
-.rodape {
+.footer {
   width: 100%;
 }
 
-.redes-sociais, .area-contato, .localizacao {
+.social-medias, .contact-area, .location {
   width: 33.333%;
   border-top:solid 1px #ccc;
   float: left;
@@ -181,11 +181,11 @@ button:hover {
   height: 250px;
 }
 
-.redes-sociais, .area-contato, .localizacao p, span {
+.social-medias, .contact-area, .location p, span {
   color: #333333;
 }
 
-.redes-sociais img {
+.social-medias img {
   margin: 0px 15px 0px 15px;
 }
 
