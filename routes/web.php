@@ -4,9 +4,7 @@ use App\Http\Middleware\AccessLogMiddleware;
 use Illuminate\Support\Facades\Route;
 
 //LocalDoController ::class, 'ActionQueSeráUsada'
-Route::middleware(AccessLogMiddleware::class)
-    ->get('/', [\App\Http\Controllers\HomeController::class, 'home'])
-    ->name('site.index'); 
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.index'); 
 Route::get('/about-us', [\App\Http\Controllers\AboutUsController::class, 'aboutUs'])->name('site.aboutus');
 Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'contact'])->name('site.contact');
 Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'store'])->name('site.contact');
