@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.index'); 
 Route::get('/about-us', [\App\Http\Controllers\AboutUsController::class, 'aboutUs'])->name('site.aboutus');
 Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'contact'])->name('site.contact');
+
 Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'store'])->name('site.contact');
 Route::get('/login', function() { return 'login'; })->name('site.login');
 
@@ -14,7 +15,7 @@ Route::get('/login', function() { return 'login'; })->name('site.login');
 // /app
 Route::prefix('/app')->group(function() {
     Route::get('/clients', function() { return 'clients'; })->name('app.clients');
-    Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
+    Route::get('/suppliers', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.suppliers');
     Route::get('/products', function() { return 'products'; })->name('app.products');
 
 });

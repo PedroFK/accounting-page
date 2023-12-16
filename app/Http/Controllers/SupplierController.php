@@ -22,6 +22,6 @@ class SupplierController extends Controller
             ],
         ];
 
-        return view('app.supplier.index', compact('suppliers'));
+        return view('app.suppliers.index', compact('suppliers'));
     }
 }
