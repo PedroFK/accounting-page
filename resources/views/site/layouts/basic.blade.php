@@ -1,5 +1,3 @@
-
-
 <html lang="pt-br">
     <head>
         <title>Contabilidade Online - @yield('titulo')</title>
