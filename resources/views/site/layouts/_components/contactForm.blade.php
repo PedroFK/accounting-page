@@ -1,13 +1,13 @@
 {{$slot}}
-<form action={{ route('site.contact') }} method="POST">
+<form action={{ route('site.contact') }} class="blue-ocean" method="POST">
     @csrf
-    <input name="name" value='{{ old('name')}}' type="text" placeholder="Nome" class="{{$class}}">
+    <input name="name"  value='{{ old('name')}}' type="text" placeholder="Nome" class="{{$class}}">
     {{ $errors->has('name') ? $errors->first('name') : '' }}
     <br>
     <input name="phone_1" value='{{ old('phone_1')}}' type="text" placeholder="Telefone" class="{{$class}}">
     {{ $errors->has('phone_1') ? $errors->first('phone_1') : '' }}
     <br>
-    <input name="email" value='{{ old('email')}}' type="text" placeholder="E-mail" class="{{$class}}">
+    <input name="email" value='{{ old('email')}}' type="text" placeholder="E-mail" class="{{$class}} ">
     {{ $errors->has('email') ? $errors->first('email') : '' }}
     <br>
     <select name="contact_reason_id" class="{{$class}}">
