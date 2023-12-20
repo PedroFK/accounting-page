@@ -1,6 +1,6 @@
 <html lang="pt-br">
     <head>
-        <title>Contabilidade Online - @yield('titulo')</title>
+        <title>Contabilidade Online - @yield('title')</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{{asset('css/defaultStyle.css')}}">
     </head>

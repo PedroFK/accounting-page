@@ -1,6 +1,6 @@
 @extends('site.layouts.basic')
 
-@section('titulo', 'Contato')
+@section('title', 'Contato')
     
 @section('content')
 <div class="page-content blue-ocean white-text">

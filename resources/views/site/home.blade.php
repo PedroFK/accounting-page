@@ -1,6 +1,6 @@
 @extends('site.layouts.basic')
 
-@section('titulo', 'Home')
+@section('title', 'Home')
 
 @section('content')
 <div class="highlight-content">

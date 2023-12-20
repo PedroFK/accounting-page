@@ -14,7 +14,7 @@ class SiteContactController extends Controller
     public function contact(Request $request) {
         $contact_reasons = ContactReason::all();
         
-        return view('site.contact', ['titulo' => 'contact (teste)', 'contact_reasons' => $contact_reasons]);
+        return view('site.contact', ['title' => 'contact (teste)', 'contact_reasons' => $contact_reasons]);
 
         /*
         $request->all();

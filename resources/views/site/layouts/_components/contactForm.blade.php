@@ -1,7 +1,8 @@
 {{$slot}}
 <form action={{ route('site.contact') }} class="blue-ocean" method="POST">
     @csrf
-    <input name="name"  value='{{ old('name')}}' type="text" placeholder="Nome" class="{{$class}}">
+    <input name="name"  value='{{ old('name')}}' type="text" placeholder="Nome" class="{{$class}}"cd
+    >
     {{ $errors->has('name') ? $errors->first('name') : '' }}
     <br>
     <input name="phone_1" value='{{ old('phone_1')}}' type="text" placeholder="Telefone" class="{{$class}}">

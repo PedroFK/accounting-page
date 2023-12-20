@@ -1,6 +1,6 @@
 @extends('site.layouts.basic')
 
-@section('titulo', 'Sobre Nós')
+@section('title', 'Sobre Nós')
 
 @section('content')
 <div class="page-content">
