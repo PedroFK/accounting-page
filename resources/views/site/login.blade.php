@@ -9,7 +9,12 @@
     </div>
 
     <div class="page-information blue-ocean">
-        Fomulário de Login
+      <form action="{{ route('site.login')}}" method="post">
+        @csrf
+        <input type="text" name="user" placeholder="Usuário">
+        <input type="password" name="password" placeholder="Senha">
+        <button type="submit">Acessar</button>
+      </form>
     </div>
 </div>
 
