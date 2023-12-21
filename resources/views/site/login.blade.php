@@ -13,7 +13,9 @@
         <form action="{{ route('site.login')}}" method="post" class="container">
           @csrf
           <input type="text" value="{{old('user')}}" name="user" placeholder="Usuário">
+          {{$errors->has('user') ? $errors->first('user') : ''}}
           <input type="password" value="{{old('password')}}" name="password" placeholder="Senha">
+          {{$errors->has('password') ? $errors->first('password') : ''}}
           <button type="submit">Acessar</button>
         </form>
       </div>
