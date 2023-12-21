@@ -12,8 +12,8 @@
       <div style="margin-left: auto; margin-right: auto; width: 30%;" class="text-white">
         <form action="{{ route('site.login')}}" method="post" class="container">
           @csrf
-          <input type="text" name="user" placeholder="Usuário">
-          <input type="password" name="password" placeholder="Senha">
+          <input type="text" value="{{old('user')}}" name="user" placeholder="Usuário">
+          <input type="password" value="{{old('password')}}" name="password" placeholder="Senha">
           <button type="submit">Acessar</button>
         </form>
       </div>
