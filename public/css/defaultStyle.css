@@ -26,7 +26,7 @@ input, select, textarea, button {
   box-sizing: border-box;
   border-radius: 3px;
   background-color: transparent;
-  color: #333;
+  color: white;
 }
 
 input::placeholder {
