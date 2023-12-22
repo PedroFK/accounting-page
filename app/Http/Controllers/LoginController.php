@@ -6,11 +6,16 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\Print_;
 use App\Models\User;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
-    public function index() {
-        return view('site.login');
+    public function index(Request $request) {
+        $erro = '';
+        if ($request->get('erro') == 1) {
+            $erro = 'A senha está incorreta';
+        }
+        return view('site.login', ['titulo' => 'Login', 'erro' => $erro] );
     }
     
     public function authenticate(Request $request) {
@@ -42,8 +47,7 @@ class LoginController extends Controller
             echo "</br>";
             echo "User existe";
         } else {
-            echo "</br>";
-            echo "User não existe";
+            return redirect()->route('site.login', ['erro' => 1]);
         }
 
         echo '<pre>';

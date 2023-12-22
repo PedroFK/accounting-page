@@ -18,6 +18,7 @@
           {{$errors->has('password') ? $errors->first('password') : ''}}
           <button type="submit">Acessar</button>
         </form>
+        {{!empty($erro) && $erro != '' ? $erro : ''}}
       </div>
     </div>
 </div>
