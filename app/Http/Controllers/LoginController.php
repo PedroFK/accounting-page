@@ -15,13 +15,14 @@ class LoginController extends Controller
     
     public function authenticate(Request $request) {
         $rules = [
-            'user'     => 'required|email',
+            'user'     => 'required|email|exists:users,email',
             'password' => 'required'
         ];
 
         $messages = [
             'user.required' =>  'O usuário é obrigatório.',
             'user.email' =>  'Deve ser um email valido.',  
+            'user.exists' =>  'Deve ser um email cadastrado',  
             'password.required' =>  'A senha é obrigatória.',  
         ];
 
