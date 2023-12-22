@@ -10,7 +10,7 @@ Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'con
 
 Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'store'])->name('site.contact');
 
-Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
+Route::get('/login/{erro?}', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate'])->name('site.login');
 
 //Parte privada do site, apenas entrar com login
