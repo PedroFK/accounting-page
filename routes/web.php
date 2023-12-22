@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Middleware\AccessLogMiddleware;
+use App\Http\Middleware\AccessLoginMidd;
 use Illuminate\Support\Facades\Route;
 
 //LocalDoController ::class, 'ActionQueSeráUsada'
@@ -10,13 +10,13 @@ Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'con
 
 Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'store'])->name('site.contact');
 
-Route::get('/login/{erro?}', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
+Route::get('/login/{error?}', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate'])->name('site.login');
 
 //Parte privada do site, apenas entrar com login
 // /app
-Route::prefix('/app')->group(function() {
-    Route::get('/clients', function() { return 'clients'; })->name('app.clients');
+Route::middleware('AccessLoginMidd:pattern')->prefix('/app')->group(function() {
+    Route::get('/clients', [\App\Http\Controllers\ClientsController::class, 'index'])->name('app.clients');
     Route::get('/suppliers', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.suppliers');
     Route::get('/products', function() { return 'products'; })->name('app.products');
 

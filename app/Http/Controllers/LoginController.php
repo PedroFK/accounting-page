@@ -46,7 +46,10 @@ class LoginController extends Controller
                 ->first();
 
         if (!empty($user)) {
-            dd($user);
+            $_SESSION['name'] = $user->name;
+            $_SESSION['email'] = $user->email;
+
+            return redirect()->route('app.clients');
         } else {
             return redirect()->route('site.login', ['error' => 1]);
         }

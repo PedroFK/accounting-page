@@ -11,10 +11,12 @@ class AccessLoginMidd
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $ip = $request->server->get('REMOTE_ADDR');
-        $route = $request->getRequestUri();
-
-        //AccessLog::create(['log' => "IP $ip requisitou a rota: $route"]);
-        return $next($request);
+         session_start();
+         if (!empty($_SESSION)) {
+            return $next($request);
+         }
+         else {
+            return redirect()->route('site.login', ['error' => 2 ]);
+        }
     }
 }
