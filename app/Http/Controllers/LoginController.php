@@ -11,11 +11,15 @@ use Illuminate\Support\Facades\Redirect;
 class LoginController extends Controller
 {
     public function index(Request $request) {
-        $erro = '';
-        if ($request->get('erro') == 1) {
-            $erro = 'A senha está incorreta';
+        $error = '';
+        if ($request->get('error') == 1) {
+            $error = 'A senha está incorreta';
         }
-        return view('site.login', ['titulo' => 'Login', 'erro' => $erro] );
+
+        if ($request->get('error') == 2) {
+            $error = 'Faça login para ter acesso!';
+        }
+        return view('site.login', ['titulo' => 'Login', 'error' => $error] );
     }
     
     public function authenticate(Request $request) {
@@ -36,22 +40,15 @@ class LoginController extends Controller
         $email = $request->get('user');
         $password = $request->get('password');
 
-        echo "Usuário: $email | Senha: $password";
-        
         $user = User::where('email', $email)
             	->where('password', $password)
                 ->get()
                 ->first();
 
         if (!empty($user)) {
-            echo "</br>";
-            echo "User existe";
+            dd($user);
         } else {
-            return redirect()->route('site.login', ['erro' => 1]);
+            return redirect()->route('site.login', ['error' => 1]);
         }
-
-        echo '<pre>';
-        print_r($user);
-        '</pre>';
     }
 }

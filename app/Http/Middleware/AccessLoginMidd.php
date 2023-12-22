@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\AccessLog;
 use Symfony\Component\HttpFoundation\Response;
 
-class AccessLogMiddleware
+class AccessLoginMidd
 {
     public function handle(Request $request, Closure $next): Response
     {
