@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\Print_;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -26,6 +27,26 @@ class LoginController extends Controller
 
         $request->validate($rules, $messages);
 
-        Print_r($request->all());
+        $email = $request->get('user');
+        $password = $request->get('password');
+
+        echo "Usuário: $email | Senha: $password";
+        
+        $user = User::where('email', $email)
+            	->where('password', $password)
+                ->get()
+                ->first();
+
+        if (!empty($user)) {
+            echo "</br>";
+            echo "User existe";
+        } else {
+            echo "</br>";
+            echo "User não existe";
+        }
+
+        echo '<pre>';
+        print_r($user);
+        '</pre>';
     }
 }
