@@ -54,4 +54,8 @@ class LoginController extends Controller
             return redirect()->route('site.login', ['error' => 1]);
         }
     }
+
+    public function exit() {
+        echo 'sair';
+    }
 }

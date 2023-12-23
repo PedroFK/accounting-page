@@ -4,7 +4,7 @@ use App\Http\Middleware\AccessLoginMidd;
 use Illuminate\Support\Facades\Route;
 
 //LocalDoController ::class, 'ActionQueSeráUsada'
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.index'); 
+Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'index'])->name('site.index'); 
 Route::get('/about-us', [\App\Http\Controllers\AboutUsController::class, 'aboutUs'])->name('site.aboutus');
 Route::get('/contact', [\App\Http\Controllers\SiteContactController::class, 'contact'])->name('site.contact');
 
@@ -20,10 +20,10 @@ Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authentica
 //});
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('app.home');
-Route::get('/exit', [\App\Http\Controllers\ExitController::class, 'index'])->name('app.exit');
+Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'exit'])->name('app.exit');
 Route::get('/client', [\App\Http\Controllers\ClientsController::class, 'index'])->name('app.client');
 Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
-Route::get('/product', function() { return 'products'; })->name('app.product');
+Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product');
 
 
 
