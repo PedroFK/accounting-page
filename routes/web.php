@@ -15,12 +15,15 @@ Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authentica
 
 //Parte privada do site, apenas entrar com login
 // /app
-Route::middleware('AccessLoginMidd:pattern')->prefix('/app')->group(function() {
-    Route::get('/clients', [\App\Http\Controllers\ClientsController::class, 'index'])->name('app.clients');
-    Route::get('/suppliers', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.suppliers');
-    Route::get('/products', function() { return 'products'; })->name('app.products');
+//Route::middleware('AccessLoginMidd:pattern')->prefix('/app')->group(function() {
+    
+//});
 
-});
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('app.home');
+Route::get('/exit', [\App\Http\Controllers\ExitController::class, 'index'])->name('app.exit');
+Route::get('/client', [\App\Http\Controllers\ClientsController::class, 'index'])->name('app.client');
+Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
+Route::get('/product', function() { return 'products'; })->name('app.product');
 
 
 
