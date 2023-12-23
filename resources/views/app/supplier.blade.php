@@ -1,13 +1,8 @@
-<h3>Fonecedor (view)</h3>
-{{-- Comentário no blade é feito assim! --}}
-{{-- Podemos escrever código php direto do blade --}}
+@extends('app.layouts.basic')
 
+@section('title', 'Fornecedor')
 
-
-@php
- // Aqui dentro eu comento normalmente!
-@endphp
-
+@section('content')
 <h3>O primeiro fornecedor da lista é: {{$suppliers[0]['name']}}</h3>
 
 
@@ -22,3 +17,4 @@
 @for ($i = 0; $i < count($suppliers) ; $i++)
     {{$i+1}}: {{$suppliers[$i]['name']}} <br>
 @endfor
+@endsection
