@@ -3,6 +3,13 @@
 @section('title', 'Fornecedor')
 
 @section('content')
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 <h3>O primeiro fornecedor da lista é: {{$suppliers[0]['name']}}</h3>
 
 
