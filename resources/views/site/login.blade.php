@@ -12,9 +12,9 @@
       <div style="margin-left: auto; margin-right: auto; width: 30%;" class="text-white">
         <form action="{{ route('site.login')}}" method="post" class="container">
           @csrf
-          <input type="text" value="{{old('user')}}" name="user" placeholder="Usuário">
+          <input type="text" class="login-input" value="{{old('user')}}" name="user" placeholder="Usuário">
           {{$errors->has('user') ? $errors->first('user') : ''}}
-          <input type="password" value="{{old('password')}}" name="password" placeholder="Senha">
+          <input type="password" class="login-input" value="{{old('password')}}" name="password" placeholder="Senha">
           {{$errors->has('password') ? $errors->first('password') : ''}}
           <button type="submit">Acessar</button>
         </form>

@@ -211,11 +211,15 @@ button:hover {
   margin: 0px 15px 0px 15px;
 }
 
+.login-input {
+  border: 2px solid #1c1c27;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
-  border: 1px solid #1c1c27;
-  -webkit-text-fill-color: #000000;
-  -webkit-box-shadow: 0 0 0px 1000px #0d4363 inset;
+  border: 2px solid #1c1c27;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 1 1 1px 1000px #0d4363 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
