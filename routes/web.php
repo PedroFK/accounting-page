@@ -23,6 +23,9 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'logout'])->name('app.exit');
 Route::get('/client', [\App\Http\Controllers\ClientController::class, 'index'])->name('app.client');
 Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
+Route::post('/supplier/list', [\App\Http\Controllers\SupplierController::class, 'list'])->name('app.supplier.list');
+
+
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product');
 
 

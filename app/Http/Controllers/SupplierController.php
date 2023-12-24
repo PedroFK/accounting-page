@@ -12,4 +12,8 @@ class SupplierController extends Controller
 
         return view('app.supplier.index', ['suppliers' => $suppliers]);
     }
+    
+    public function list() {
+        return view('app.supplier.list');
+    }
 }
