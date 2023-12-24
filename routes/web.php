@@ -20,7 +20,7 @@ Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authentica
 //});
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('app.home');
-Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'exit'])->name('app.exit');
+Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'logout'])->name('app.exit');
 Route::get('/client', [\App\Http\Controllers\ClientController::class, 'index'])->name('app.client');
 Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product');

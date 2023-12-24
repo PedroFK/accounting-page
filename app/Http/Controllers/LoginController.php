@@ -55,7 +55,7 @@ class LoginController extends Controller
         }
     }
 
-    public function exit() {
-        echo 'sair';
+    public function logout() {
+        return redirect()->route('site.index');
     }
 }
