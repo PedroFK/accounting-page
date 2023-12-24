@@ -10,6 +10,6 @@ class SupplierController extends Controller
     public function index() {
         $suppliers = Supplier::all();
 
-        return view('app.supplier', ['suppliers' => $suppliers]);
+        return view('app.supplier.index', ['suppliers' => $suppliers]);
     }
 }
