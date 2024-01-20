@@ -3,16 +3,12 @@
 @section('title', 'Cliente')
 
 @section('content')
-<div>
-  <h3>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    Clientes page
-  </h3>
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3> Pag de cliente </h3>
 @endsection
