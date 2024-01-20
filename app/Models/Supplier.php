@@ -10,5 +10,5 @@ class Supplier extends Model
 {
     protected $table = 'suppliers';
     use HasFactory, SoftDeletes;
-    protected $fillable = ['name', 'site','state','email'];
+    protected $fillable = ['name', 'site', 'state', 'email'];
 }
