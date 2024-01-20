@@ -20,21 +20,22 @@
 
         <div class="page-information blue-ocean">
             <div style="width: 30%; margin-left: auto; margin-right: auto; color: white;">
-                {{ $msg }}
+                {{ $msg ?? '' }}
                 <form method="post" action="{{ route('app.supplier.add') }}">
                     @csrf
-                    <input type="text" name="name" value="{{old('name')}}" placeholder="Nome" class="black-border" id="">
+                    <input type="hidden" name="id" value="{{$supplier->id ?? ''}}">
+                    
+                    <input type="text" name="name" value="{{$supplier->name ?? old('name')}}" placeholder="Nome" class="black-border" id="">
                     {{    $errors->has('name') ? $errors->first('name') : ''}}
-                    <input type="text" name="site" value="{{old('site')}}" placeholder="Site" class="black-border" id="">
+                    <input type="text" name="site" value="{{$supplier->site ?? old('site')}}" placeholder="Site" class="black-border" id="">
                     {{    $errors->has('site') ? $errors->first('site') : ''}}
-                    <input type="text" name="state" value="{{old('state')}}" placeholder="Estado" class="black-border" id="">
+                    <input type="text" name="state" value="{{$supplier->state ?? old('state')}}" placeholder="Estado" class="black-border" id="">
                     {{    $errors->has('state') ? $errors->first('state') : ''}}
-                    <input type="text" name="email" value="{{old('email')}}" placeholder="E-mail" class="black-border" id="">
+                    <input type="text" name="email" value="{{$supplier->email ?? old('email')}}" placeholder="E-mail" class="black-border" id="">
                     {{    $errors->has('email') ? $errors->first('email') : ''}}
                     <button type="submit" class="black-border">Cadastrar</button>
                 </form>
             </div>
         </div>
-
     </div>
 @endsection

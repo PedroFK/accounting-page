@@ -28,6 +28,8 @@ Route::post('/supplier/list', [\App\Http\Controllers\SupplierController::class, 
 Route::get('/supplier/add', [\App\Http\Controllers\SupplierController::class, 'add'])->name('app.supplier.add');
 Route::post('/supplier/add', [\App\Http\Controllers\SupplierController::class, 'add'])->name('app.supplier.add');
 
+Route::get('/supplier/edit/{id}', [\App\Http\Controllers\SupplierController::class, 'edit'])->name('app.supplier.edit');
+Route::get('/supplier/delete/{id}', [\App\Http\Controllers\SupplierController::class, 'delete'])->name('app.supplier.delete');
 
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product');
 

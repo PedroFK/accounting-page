@@ -12,15 +12,38 @@
         <div class="menu-2" style="">
             <ul>
                 <li>
-                    <a href="#" style="color: white;">Novo</a>
-                    <a href="#" style="color: white;">Consulta</a>
+                    <a href="{{ route('app.supplier.add')}}" style="color: white;">Novo</a>
+                    <a href="{{ route('app.supplier') }}" style="color: white;">Consulta</a>
                 </li>
             </ul>
         </div>
     
         <div class="page-information blue-ocean">
-            <div style="width: 30%; margin-left: auto; margin-right: auto; color: black;">
-                ... list ...
+            <div style="width: 90%; margin-left: auto; margin-right: auto; color: white;">
+                <table style="color: white;" border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Site</th>
+                            <th>Estado</th>
+                            <th>E-mail</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($suppliers as $supplier)
+                            <tr>
+                                <th>{{$supplier->name}}</th>
+                                <th>{{$supplier->site}}</th>
+                                <th>{{$supplier->state}}</th>
+                                <th>{{$supplier->email}}</th>
+                                <th><a href="{{route('app.supplier.edit', $supplier->id)}}">Editar</a></th>
+                                <th><a href="{{route('app.supplier.delete', $supplier->id)}}">Excluir</a></th>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     
