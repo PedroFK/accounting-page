@@ -14,13 +14,12 @@ class SupplierController extends Controller
     }
     
     public function list(Request $request) {
-        if  ($request->input('_token') != '') {
             $suppliers = Supplier::where('name','like', '%'.$request->input('name').'%')
             ->where('site','like', '%'.$request->input('site').'%')
             ->where('state','like', '%'.$request->input('state').'%')
             ->where('email','like', '%'.$request->input('email').'%')
-            ->get();
-        }
+            ->paginate(2);
+        
         return view('app.supplier.list', ['suppliers' => $suppliers]);
     }
 

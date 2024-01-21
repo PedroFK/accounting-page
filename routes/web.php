@@ -24,7 +24,10 @@ Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'logout'])->n
 Route::get('/client', [\App\Http\Controllers\ClientController::class, 'index'])->name('app.client');
 
 Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
+
 Route::post('/supplier/list', [\App\Http\Controllers\SupplierController::class, 'list'])->name('app.supplier.list');
+Route::get('/supplier/list/{page?}', [\App\Http\Controllers\SupplierController::class, 'list'])->name('app.supplier.list');
+
 Route::get('/supplier/add', [\App\Http\Controllers\SupplierController::class, 'add'])->name('app.supplier.add');
 Route::post('/supplier/add', [\App\Http\Controllers\SupplierController::class, 'add'])->name('app.supplier.add');
 

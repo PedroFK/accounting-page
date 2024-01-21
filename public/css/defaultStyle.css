@@ -257,3 +257,15 @@ input:-webkit-autofill:focus {
   -webkit-box-shadow: 1 1 1px 1000px #0d4363 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+.pagination li {
+  display: inline !important; 
+}
+
+.pagination ul{
+  list-style-type: none !important;
+}
+
+.pagination svg{
+  display: none !important;
+}

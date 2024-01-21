@@ -38,17 +38,14 @@
                                 <th>{{$supplier->site}}</th>
                                 <th>{{$supplier->state}}</th>
                                 <th>{{$supplier->email}}</th>
-<<<<<<< HEAD
                                 <th><a href="{{route('app.supplier.edit', $supplier->id)}}">Editar</a></th>
-                                <th><a href="{{route('app.supplier.delete', $supplier->id)}}">Excluir</a></th>
-=======
-                                <th>Adicionar</th>
-                                <th>Excluir</th>
->>>>>>> 047e39900cb6729d91f8fe7d0c841603cac562fe
+                                <th><a href="#">Excluir</a></th>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+
+                {{ $suppliers->links() }}
             </div>
         </div>
     
