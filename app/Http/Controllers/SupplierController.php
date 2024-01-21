@@ -62,7 +62,7 @@ class SupplierController extends Controller
             $supplier->create($request->all());
             $msg = 'Cadastro realizado com sucesso';
         }
+
         return view('app.supplier.add', ['msg' => $msg]);
-        
     }
 }
