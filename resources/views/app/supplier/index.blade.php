@@ -20,7 +20,11 @@
     
         <div class="page-information blue-ocean">
             <div style="width: 30%; margin-left: auto; margin-right: auto; color: white;">
+<<<<<<< HEAD
                 <form method="post" action="{{ route('app.supplier.list') }}">
+=======
+                <form method="post" action="{{ route('app.supplier.list') }}">`
+>>>>>>> 047e39900cb6729d91f8fe7d0c841603cac562fe
                     @csrf
                     <input type="text" name="name" value="{{old('name')}}" placeholder="Nome" class="black-border" id="">
                     {{    $errors->has('name') ? $errors->first('name') : ''}}
