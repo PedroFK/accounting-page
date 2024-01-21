@@ -22,18 +22,16 @@ class SupplierController extends Controller
             ->get();
         }
         return view('app.supplier.list', ['suppliers' => $suppliers]);
-<<<<<<< HEAD
     }
 
     public function edit($id) {
         $supplier = Supplier::find($id);
         return view('app.supplier.add', ['supplier' => $supplier]);
     }
+    
     public function delete($id) {
         
         echo 'delete';
-=======
->>>>>>> 047e39900cb6729d91f8fe7d0c841603cac562fe
     }
 
     public function add(Request $request) {
