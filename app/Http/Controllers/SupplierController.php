@@ -20,7 +20,7 @@ class SupplierController extends Controller
             ->where('email','like', '%'.$request->input('email').'%')
             ->paginate(2);
         
-        return view('app.supplier.list', ['suppliers' => $suppliers]);
+        return view('app.supplier.list', ['suppliers' => $suppliers, 'request' => $request->all()]);
     }
 
     public function edit($id) {
@@ -29,8 +29,8 @@ class SupplierController extends Controller
     }
     
     public function delete($id) {
-        
-        echo 'delete';
+        Supplier::find($id)->delete();
+        return view('app.supplier');
     }
 
     public function add(Request $request) {

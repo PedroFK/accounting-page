@@ -39,13 +39,13 @@
                                 <th>{{$supplier->state}}</th>
                                 <th>{{$supplier->email}}</th>
                                 <th><a href="{{route('app.supplier.edit', $supplier->id)}}">Editar</a></th>
-                                <th><a href="#">Excluir</a></th>
+                                <th><a href="{{route('app.supplier.delete', $supplier->id)}}">Excluir</a></th>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
 
-                {{ $suppliers->links() }}
+                {{ $suppliers->appends($request)->links() }}
             </div>
         </div>
     
