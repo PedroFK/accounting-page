@@ -35,7 +35,7 @@ Route::post('/supplier/add', [\App\Http\Controllers\SupplierController::class, '
 Route::get('/supplier/edit/{id}', [\App\Http\Controllers\SupplierController::class, 'edit'])->name('app.supplier.edit');
 Route::get('/supplier/delete/{id}', [\App\Http\Controllers\SupplierController::class, 'delete'])->name('app.supplier.delete');
 
-Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product');
+Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product.index');
 Route::get('/product/create', [\App\Http\Controllers\ProductController::class, 'create'])->name('app.product.create');
 Route::resource('products', ProductController::class);
 
