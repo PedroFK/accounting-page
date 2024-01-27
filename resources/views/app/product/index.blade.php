@@ -12,8 +12,8 @@
         <div class="menu-2" style="">
             <ul>
                 <li>
-                    <a href="" style="color: white;">Novo</a>
-                    <a href="" style="color: white;">Consulta</a>
+                    <a href="{{ route('app.product.add')}}" style="color: white;">Novo</a>
+                    <a href="{{ route('app.product.list')}}" style="color: white;">Consulta</a>
                 </li>
             </ul>
         </div>
