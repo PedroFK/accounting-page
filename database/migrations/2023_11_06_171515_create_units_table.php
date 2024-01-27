@@ -11,8 +11,8 @@ return new class extends Migration
         // Definindo as unidades que seraop usadas nas colunas
         Schema::create('units', function (Blueprint $table) {
             $table->id();
-            $table->string('unit', 5);
-            $table->string('descricao', 30);
+            $table->string('name', 10);
+            $table->string('abbreviation', 30);
             $table->timestamps();
         });
     }
