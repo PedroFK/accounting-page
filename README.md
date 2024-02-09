@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 ![principal](https://github.com/PedroFK/accounting-page/assets/137946119/89de6b80-6a71-4167-9761-5ab32266ca1d)
+=======
+<p align="center"><img src="/img/readme/principal.png" alt="main Page"></p>
+
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
+>>>>>>> 39debc8a11019635e2bdf6fae4341a419c623b0a
 
 ## About Laravel
 
