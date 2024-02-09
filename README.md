@@ -1,34 +1,28 @@
-<<<<<<< HEAD
+# Online Accounting - Ongoing Project
+Welcome to the repository of my online accounting project, developed in [Laravel](https://laravel.com/docs/10.x/readme) with a streamlined installation and management approach using [Docker](https://docs.docker.com/).
+
+This initiative aims to consolidate my knowledge acquired in my studies by creating a sales page for accounting services and incorporating a modern look with a dark template.
+
+## Main Page
 ![principal](https://github.com/PedroFK/accounting-page/assets/137946119/89de6b80-6a71-4167-9761-5ab32266ca1d)
-=======
-<p align="center"><img src="/img/readme/principal.png" alt="main Page"></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
->>>>>>> 39debc8a11019635e2bdf6fae4341a419c623b0a
+## Technologies and Tools
 
-## About Laravel
+- [Laravel](https://laravel.com/docs/10.x/readme): Used to structure the project and follow the MVC pattern.
+- [Docker](https://docs.docker.com/): Facilitating the efficient creation of development environments.
+- [MySQL](https://www.mysql.com/): Relational database for storing crucial information.
 
-Laravel is a web application framework with expressive, elegant syntax. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Form Page
+![formDark](https://github.com/PedroFK/accounting-page/assets/137946119/eae7cdd2-0ecd-4086-a4b0-1947f846f677)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Revised Contents
+### During the development process, I solidified previously studied knowledge, such as:
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- MVC Structure: Implementation and understanding of the Model-View-Controller architecture for organized development.
+- Controllers and Views: Utilization of controllers to manage requests and update corresponding views.
+- Models: Creation of models to represent and interact with database data.
+- Requests and HTTP Verbs: Effective handling of HTTP requests, incorporating different verbs for specific operations.
+- Laravel Faker, Seeders, and Factories: Generation of test data, population of the database with seeders, and efficient use of factories to create fictional records.
+- Laravel Relationships: Implementation of 1-to-1, 1-to-N, and N-to-N relationship concepts in models as needed.
+- MySQL Database: Review of concepts related to the creation and manipulation of tables in MySQL, efficiently integrating the database with Laravel.
