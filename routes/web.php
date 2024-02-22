@@ -3,6 +3,9 @@
 use App\Http\Middleware\AccessLoginMidd;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderProductController;
 
 //LocalDoController ::class, 'ActionQueSeráUsada'
 Route::get('/', [\App\Http\Controllers\PrincipalController::class, 'index'])->name('site.index'); 
@@ -14,15 +17,14 @@ Route::post('/contact', [\App\Http\Controllers\SiteContactController::class, 'st
 Route::get('/login/{error?}', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'authenticate'])->name('site.login');
 
-//Parte privada do site, apenas entrar com login
-// /app
+
+// PARA FACILITAR NOS ESTUDOS EU TIREI O MIDDLEWARE DE ACESSO A PARTE PRIVADA DO SITE
 //Route::middleware('AccessLoginMidd:pattern')->prefix('/app')->group(function() {
     
 //});
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('app.home');
 Route::get('/exit', [\App\Http\Controllers\LoginController::class, 'logout'])->name('app.exit');
-Route::get('/client', [\App\Http\Controllers\ClientController::class, 'index'])->name('app.client');
 
 Route::get('/supplier', [\App\Http\Controllers\SupplierController::class, 'index'])->name('app.supplier');
 
@@ -38,6 +40,10 @@ Route::get('/supplier/delete/{id}', [\App\Http\Controllers\SupplierController::c
 Route::get('/product', [\App\Http\Controllers\ProductController::class, 'index'])->name('app.product.index');
 Route::get('/product/create', [\App\Http\Controllers\ProductController::class, 'create'])->name('app.product.create');
 Route::resource('products', ProductController::class);
+
+Route::resource('client', ClientController::class);
+Route::resource('order', OrderController::class);
+Route::resource('order-product', OrderProductController::class);
 
 
 //Adicionando redirecionamento entre rotas
