@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
@@ -13,6 +15,7 @@ class ClientController extends Controller
      */
     public function index()
     {
+
         $clients = Client::all();
         return view('app.client.index', ['clients' => $clients]);
     }
@@ -22,15 +25,32 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.client.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreClientRequest $request)
+    public function store(Request $request)
     {
-        //
+
+        if ($request->input('_token') != '') {
+            $rules = [
+                'name' => 'required|min:3',
+            ];
+
+            $messages = [
+                'name.required' => 'O campo nome é obrigatório.',
+                'name.min' => 'O campo nome deve ter no mínimo 3 letras.',
+            ];
+
+            $request->validate($rules, $messages);
+
+            $client = new Client();
+            $client->name = $request->get('name');
+            $client->save();
+            return redirect()->route('client.index');
+        }
     }
 
     /**
