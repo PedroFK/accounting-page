@@ -28,12 +28,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($clients as $client)
+                        @forelse ($clients as $client)
                             <tr>
-                                <th>{{$client->name}}</th>
-                                <th><a href="{{route('client.show')}}">Mostrar</a></th>
+                                <td>{{$client->name}}</td>
+                                <td><a href="{{ route('client.show', ['client' => $client->id]) }}">Mostrar</a></td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="2">Nenhum cliente encontrado</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>
